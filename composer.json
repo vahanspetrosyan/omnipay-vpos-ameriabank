@@ -1,0 +1,19 @@
+{
+    "name": "vahanspetrosyan/omnipay-vpos-ameriabank",
+    "description": "Ameria Bank vPos API",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vahan Petrosyan",
+            "email": "vahan@petrosyan.pw"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Omnipay\\Ameriabank\\": "src/"
+        }
+    },
+    "require": {
+        "omnipay/common": "^3"
+    }
+}
