@@ -9,20 +9,19 @@ processing library for PHP 5.5+. This package implements iDram support for Omnip
 
 Omnipay is installed via [Composer](http://getcomposer.org/). To install, you can simply run:
 
-    composer require vahanspetrosyan/omnipay-vpos-ameriabank
+composer require vahanspetrosyan/omnipay-vpos-ameriabank
 
 ## Basic Usage
 
 1. Use Omnipay gateway class:
 
 ```php
-    use Omnipay\Omnipay;
+use Omnipay\Omnipay;
 ```
 
 2. Initialize Ameriabank gateway:
 
 ```php
-
 $gateway = Omnipay::create('Ameriabank');
 $gateway->setClientId('Client_ID'); // Shoud be your Ameriabank Client ID (e.g. 7e7ef8ff-6300-4a78-bb31-3ad1a8c67d5f)
 $gateway->setUsername('Username');  // Should be your Ameria Username 
@@ -37,7 +36,6 @@ $payment = $gateway->purchase([
      'description' => 'Description ...'
     ]
 )->createPaymentRequest();
-
 ```
 
 3. Processing payment <br>
