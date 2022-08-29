@@ -43,7 +43,6 @@ $payment = $gateway->purchase([
 After payment request approval, call receive positive or negative response 
 
 ```php
-
 if (empty($payment->GetPaymentIDResult->PaymentID) || $payment->GetPaymentIDResult->Respmessage != 'OK') {
 
     return $payment->GetPaymentIDResult; // in case if response was negative (rejected).
@@ -57,8 +56,6 @@ if (empty($payment->GetPaymentIDResult->PaymentID) || $payment->GetPaymentIDResu
         'redirectUrl' => $response->getRedirectUrl()                            // redirection to previously generated unique URL 
     ];
 }
-
-
 ```
 
 4. Completeng Payment <br>
@@ -66,7 +63,6 @@ You will be redirected to AmeriaBank VPOS form page.
 After filling and submitting credit card data AmeriaBank page will webhook http://example.com/xxx (refer to also to point 2)
 
 ```php
-
 $gateway = Omnipay::create('Ameriabank');
 $gateway->setClientId('Client_ID'); // Shoud be your Ameriabank Client ID (e.g. 7e7ef8ff-6300-4a78-bb31-3ad1a8c67d5f)
 $gateway->setUsername('Username');  // Should be your Ameria Username 
@@ -84,7 +80,6 @@ if ($paymentFields = $webService->GetPaymentFieldsResult) {
 }
 
 return $webService; // Return error text in case of connection errors
-
 ```
 For testing puposes you should use only AMD currency and charge not more than 10 AMD 
 
