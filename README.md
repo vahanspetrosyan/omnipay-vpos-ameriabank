@@ -8,8 +8,9 @@ processing library for PHP 5.5+. This package implements iDram support for Omnip
 ## Installation
 
 Omnipay is installed via [Composer](http://getcomposer.org/). To install, you can simply run:
-
+ ```` bash
 composer require vahanspetrosyan/omnipay-vpos-ameriabank
+````
 
 ## Basic Usage
 
